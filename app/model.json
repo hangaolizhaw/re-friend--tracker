@@ -73,7 +73,76 @@
                     ]
                 },
                 {
-                    "id": "AddFriendActivityForm",
+                    "id": "AddFriendForm",
+                    "title": "Friend",
+                    "url": "/activity/:activityKey/friend",
+                    "formFieldList": [
+                        {
+                            "id": "friend",
+                            "type": "autocomplete",
+                            "name": "Friend",
+                            "url": "/friend",
+                            "defaultKey": "friendKey",
+                            "readonly": true,
+                            "form": "FriendForm",
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "id": "ActivityForm",
+                    "title": "Activity",
+                    "url": "/activity",
+                    "formFieldList": [
+                        {
+                            "id": "name",
+                            "type": "text",
+                            "name": "Activity",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        },
+                        {
+                            "id": "creationdate",
+                            "type": "date",
+                            "name": "Date",
+                            "width": 2
+                        },
+                        {
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000
+                        }
+                    ]
+                },
+                {
+                    "id": "AddActivityForm",
                     "title": "Activity",
                     "url": "/friend/:friendKey/activity",
                     "formFieldList": [
@@ -123,35 +192,14 @@
                         {
                             "type": "okButton",
                             "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "AddLocationActivityForm",
-                    "title": "Activity",
-                    "url": "/location/:locationKey/activity",
-                    "formFieldList": [
-                        {
-                            "id": "activity",
-                            "type": "autocomplete",
-                            "name": "Activity",
-                            "url": "/activity",
-                            "defaultKey": "activityKey",
-                            "readonly": true,
-                            "form": "ActivityForm",
-                            "width": 2
                         },
                         {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000
                         }
                     ]
                 },
@@ -178,61 +226,20 @@
                         {
                             "type": "okButton",
                             "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "ActivityForm",
-                    "title": "Activity",
-                    "url": "/activity",
-                    "formFieldList": [
+                        },
                         {
-                            "id": "name",
+                            "id": "comment",
                             "type": "text",
-                            "name": "Activity",
+                            "name": "Comments",
                             "width": 2,
-                            "required": true
+                            "height": 4,
+                            "maxLength": 5000
                         },
                         {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "AddFriendForm",
-                    "title": "Friend",
-                    "url": "/activity/:activityKey/friend",
-                    "formFieldList": [
-                        {
-                            "id": "friend",
-                            "type": "autocomplete",
-                            "name": "Friend",
-                            "url": "/friend",
-                            "defaultKey": "friendKey",
-                            "readonly": true,
-                            "form": "FriendForm",
+                            "id": "creationdate",
+                            "type": "date",
+                            "name": "CreationDate",
                             "width": 2
-                        },
-                        {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
                         }
                     ]
                 }
